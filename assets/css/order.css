@@ -1,0 +1,126 @@
+/* =========================
+   GENERAL
+=========================*/
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+/* =========================
+   TABLA
+=========================*/
+.table-container {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+thead {
+    background: #007bff;
+    color: #ffffff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+tbody tr:hover {
+    background: #f1f5ff;
+}
+
+/* =========================
+   ESTADOS
+=========================*/
+.estado {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.estado.pendiente {
+    background: #fdecea;
+    color: #d93025;
+}
+
+.estado.facturado {
+    background: #e6f4ea;
+    color: #188038;
+}
+
+/* =========================
+   BOTONES
+=========================*/
+.btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-view {
+    background: #007bff;
+    color: white;
+}
+
+.btn-view:hover {
+    background: #0056b3;
+}
+
+/* =========================
+   RESPONSIVE
+=========================*/
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        background: white;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 6px 0;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+    }
+}
